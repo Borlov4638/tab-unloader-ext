@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Unload Tab",
+  "version": "1.0",
+  "description": "Discards old tabs",
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "browser_action": {
+    "default_title": "Tab Unloader",
+    "default_area": "navbar"
+  }
+}
