@@ -12,6 +12,7 @@
   },
   "browser_action": {
     "default_title": "Tab Unloader",
-    "default_area": "navbar"
+    "default_area": "navbar",
+    "default_popup": "./set-discard-time.html"
   }
 }

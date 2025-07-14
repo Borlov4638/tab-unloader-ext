@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tab Discarder</title>
+    <link href="./css/tailwind.css" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      @keyframes subtle-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+      }
+      .glow-animation {
+        animation: subtle-glow 3s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-900 text-gray-100 font-sans min-h-[180px] w-80 flex items-center justify-center p-2"
+  >
+    <div
+      class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 w-full max-w-[280px] border border-gray-700"
+    >
+      <h1 class="text-lg font-semibold text-center text-gray-100 mb-3">
+        Tab Discarder
+      </h1>
+      <div class="space-y-3">
+        <label for="discard-time" class="text-sm font-medium text-gray-300"
+          >Discard after (seconds)</label
+        >
+        <input
+          type="text"
+          inputmode="numeric"
+          id="discard-time"
+          name="discard-time"
+          min="0"
+          max="10000"
+          value="600"
+          class="w-full bg-gray-700/50 border border-gray-600 rounded-md p-1.5 text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all"
+        />
+        <button
+          id="set-time-btn"
+          type="button"
+          class="w-full bg-gray-600 text-gray-100 rounded-md p-1.5 hover:bg-gray-500 transition-all glow-animation"
+        >
+          Set Time
+        </button>
+      </div>
+    </div>
+    <script src="./popup.js"></script>
+  </body>
+</html>
